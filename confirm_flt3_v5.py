@@ -57,10 +57,10 @@ def subset_bam(path_to_bedtools, samtools, bamfile, sub_region, sid):
 
 def itd_detect(bamfile, itdetectpy,path_to_itdetect,genome_fasta, genomic_portion_file, sid):
     try:
-        print("itd detection started...")
+        print("itd tool started...")
         itdetect = ["python3",itdetectpy, "-p", path_to_itdetect, "-r", genome_fasta, "-t", genomic_portion_file, "-b", bamfile, "-o", f"{sid}_itdetect.vcf"]
         subprocess.run(itdetect, capture_output=False, text=True)
-        print("itd detected...")
+        print("itd tool completed...")
     except FileNotFoundError as e:
         print(f"Error: {e}")
     except subprocess.CalledProcessError as e:
@@ -207,11 +207,13 @@ def manually_calculate_allele_burden(in_depth, out_depth, var, alt_attribute):
         out_avg = round(sum(out_num)/len(out_num),2)
         print(f"variant file {count} is for {res3}")
         if alt_attribute == "dup":
+            alt_depth = round((in_avg - out_avg),2)
             alt_burden = round(((in_avg - out_avg)/in_avg)*100,2)
-            print(f"Total depth (Alt+Ref) = {in_avg}\n Alt depth = {out_avg}\n Allele Burden = {alt_burden}%\n")
+            print(f"Total depth (Alt+Ref) = {in_avg}\n Alt depth = {alt_depth}\n Allele Burden = {alt_burden}%\n")
         if alt_attribute == "del":
+            alt_depth = round((out_avg - in_avg),2)
             alt_burden = round(((out_avg - in_avg)/out_avg)*100,2)
-            print(f"Total depth (Alt+Ref) = {out_avg}\n Alt depth = {in_avg}\n Allele Burden = {alt_burden}%\n")
+            print(f"Total depth (Alt+Ref) = {out_avg}\n Alt depth = {alt_depth}\n Allele Burden = {alt_burden}%\n")
         count += 1 
 
 def software_calculate_allele_burden(freqs, alt_attribute):
