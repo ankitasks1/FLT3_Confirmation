@@ -1,0 +1,9 @@
+samtools	/home/ankit.verma/tools_av/samtools-1.20/samtools
+bedtools	/usr/local/bin/bedtools
+vep	/home/ankit.verma/Documents/checks/flt3/ensembl-vep/vep
+itdetectpy	ITDetect.py
+genome_fasta	/home/ankit.verma/Documents/checks/picard/hg38.fa
+genomic_portion_file	/home/ankit.verma/Documents/checks/flt3/FLT3.exon.14.15.hg38.txt
+path_to_itdetect	/home/ankit.verma/Documents/checks/flt3/itdetect/
+sub_region	FLT3.exon.14.15.hg38.bed
+cachedir	/home/ankit.verma/Documents/checks/flt3/.vep/
