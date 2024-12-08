@@ -5,7 +5,7 @@ import subprocess
 import argparse
 import time
 
-## python3 ~/Documents/scripts/confirm_flt3_v4.py --span 6 --alt_type dup --bamfile 8807602.rmdup.realign.recal.bam --config config.txt --sid 8807602 --id x46 --vcftype f --itdetect y
+## python3 ~/Documents/scripts/confirm_flt3_v5.py --span 6 --alt_type dup --bamfile sample1.rmdup.realign.recal.bam --config config.txt --sid sample1 --id x46 --vcftype f --itdetect y
 
 #""""Ankit Verma (ankitverma9079@gmail.com)"""
 
@@ -163,8 +163,8 @@ def get_depth(samtools, in_files_list, out_files_list,indiv_regions, bamfile, si
 def annotation(vep, vcf, sid, cachedir):
     print('annotation started...')
     try:
-    #     command=[vep, "-i",vcf,"-o",f"{sid}_anno.txt","--cache", "--dir_cache", cachedir, "--force_overwrite","--hgvsg","--hgvs"]
-    #     subprocess.run(command, capture_output=False, text=True)
+        command=[vep, "-i",vcf,"-o",f"{sid}_anno.txt","--cache", "--dir_cache", cachedir, "--force_overwrite","--hgvsg","--hgvs"]
+        subprocess.run(command, capture_output=False, text=True)
         print('annotation completed...')
         with open(f"{sid}_anno.txt", "r") as myfile:
             for i in myfile:
