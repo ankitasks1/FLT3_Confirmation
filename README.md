@@ -1,8 +1,6 @@
 # FLT3 Confirmation
 ## Repository for "Tools and materials to confirm FLT3"
 
-Note: Get the ITdetect from https://github.com/cpmsnuh/ITDetect
-
 ### check the usage and parameters
 python3 ~/Documents/scripts/confirm_flt3_v5.py -h
 
@@ -15,3 +13,4 @@ python3 ~/Documents/scripts/confirm_flt3_v5.py --span 6 --alt_type dup --bamfile
 ### Note:
 #### For FLT3 duplication this script should be run with --alt_type dup
 #### For large deletion this should be run --alt_type del
+Download: Get the ITdetect from https://github.com/cpmsnuh/ITDetect
