@@ -253,8 +253,8 @@ def main():
     config = config_file(args.config)
     # print(config)
 
-    # print('\nSubsetting BAM...')
-    # subset_bam(config['bedtools'], config['samtools'], args.bamfile, config['sub_region'], args.sid)
+    print('\nSubsetting BAM...')
+    subset_bam(config['bedtools'], config['samtools'], args.bamfile, config['sub_region'], args.sid)
 
     print('\nDetecting ITDs...')
     if args.itdetect.lower() == 'y':
