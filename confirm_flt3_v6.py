@@ -5,7 +5,7 @@ import subprocess
 import argparse
 import time
 
-## python3 ~/Documents/scripts/confirm_flt3_v6.py --lspan 0 --rspan 2 --alt_type dup --bamfile 8821721.Aligned.sortedByCoord.out.bam --config config.txt --sid 8821721 --id 8821721 --vcftype f --annotation f --itdetect f
+## python3 ~/Documents/scripts/confirm_flt3_v6.py --lspan 0 --rspan 2 --alt_type dup --bamfile sampleid.Aligned.sortedByCoord.out.bam --config config.txt --sid sampleid --id anyid --vcftype f --annotation f --itdetect f
 
 #""""Ankit Verma (ankitverma9079@gmail.com)"""
 
