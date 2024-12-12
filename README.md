@@ -12,7 +12,7 @@ python3 ~/Documents/scripts/confirm_flt3_v6.py -h
 ## python3 ~/Documents/scripts/confirm_flt3_v6.py --lspan 0 --rspan 2 --alt_type dup --bamfile sampleid.Aligned.sortedByCoord.out.bam --config config.txt --sid sampleid --id anyid --vcftype f --annotation n --itdetect n
 
 ### with ITDs detection but No annotation
-```bash
+```
 python3 ~/Documents/scripts/confirm_flt3_v6.py --lspan 0 --rspan 2 --alt_type dup --bamfile sampleid.Aligned.sortedByCoord.out.bam --config config.txt --sid sampleid --id anyid --vcftype f --annotation n --itdetect y </code>
 ```
 
